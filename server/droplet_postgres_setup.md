@@ -1,9 +1,12 @@
 1) Set up Droplet, user and Add Public Key Authentication (optional - delete password login 
 https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-16-04
 
-Bare copy-paste indhold af public key - behøver ikke ssh-copy-id eller cat. 
-3) Nu kan serveren tilgås fra local windows pc med putty eller i kommand promt med:
-ssh brugernavn@ip (ssh emil@178.128.0.105)
+Jump step about ssh-copy-id eller cat to server and copy-paste content of public key instead 
+
+2) Now you should be able to access the server from your local machine with putty or terminal.
+2.1)
+Nu kan serveren tilgås fra local windows pc med putty eller i kommand promt med:
+ss0h brugernavn@ip (ssh emil@178.128.0.105)
 3) Install nodejs og npm
 https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04
 4) Install postgresql

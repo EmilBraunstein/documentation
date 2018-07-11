@@ -19,6 +19,9 @@ https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgres
 - On the server go to /etc/postgresql/9.1/main/ and `sudo nano pg_hba.conf` and insert at the buttom `host all all 0.0.0.0/0 md5`. Save and exit.
 - On the server go to /etc/postgresql/9.1/main/ and `sudo nano postgresql.conf` and replace `#listen_addresses = 'localhost'` with `listen_addresses = '*'` Save and exit.
 
-8)
+8) End by restarting postgresql with the commmand `sudo service postgresql restart`
 
+9) If necessary open relevant port (in this case default port 5432) in windows firewall (remeber security aspects...)
+http://www.tomshardware.co.uk/faq/id-3114787/open-firewall-ports-windows.html
 
+10) Connect with PGadmin4 with droplet IP, the created user and password. If connectiong fails on authentification then go to login to server, connect to postgress with `sudo -u postgres psql` and run query `CREATE USER myuser WITH ENCRYPTED PASSWORD 'secret';`

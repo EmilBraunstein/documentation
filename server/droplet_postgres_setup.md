@@ -10,7 +10,7 @@ https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubunt
 4) Install nodejs og npm (I only used the first step "How To Install the Distro-Stable Version for Ubuntu")
 https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04
 
-5) Install postgresql
+5) Install postgresql (I stoped the tutorial at "Create and Delete Tables")
 https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-16-04
 
 6) Install pgadmin på local windows

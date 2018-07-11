@@ -14,14 +14,9 @@ https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgres
 5) Install pgadmin på local windows
 
 6) Prepare postgres for remote connection (OBS! no security steps are taking into consideration)
-- On the server go to /etc/postgresql/9.1/main/ and `sudo nano pg_hba.conf` and insert at the buttom: host all all 0.0.0.0/0 md5. Save and exit.
+- On the server go to /etc/postgresql/9.1/main/ and `sudo nano pg_hba.conf` and insert at the buttom `host all all 0.0.0.0/0 md5`. Save and exit.
 - On the server go to /etc/postgresql/9.1/main/ and `sudo nano postgresql.conf` and replace `listen_addresses = 'localhost'` with `listen_addresses = '*'` Save and exit.
 
-6.1) /etc/postgresql/9.1/main/pg_hba.conf (sudo nano pg_hba.conf) og indsæt nederst:
-host all all 0.0.0.0/0 md5
- 
-Gem og exit
-6.2) /etc/postgresql/9.1/main/pg_hba.conf (sudo nano pg_hba.conf) og indsæt/ændre til:
-listen_addresses = '*' (UDEN # forrest)
- 
-Nu kan der connectes
+7)
+
+

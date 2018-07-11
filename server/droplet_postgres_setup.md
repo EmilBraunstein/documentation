@@ -1,6 +1,6 @@
 This description aims towards setting up a TEST environment with a Droplet with postgresql db and connecting to it from a local machine with PGadmin4, QGIS 3.0 and Notepad++. For further use of this test environment one should set up extra security.
 
-1) Spin up Droplet, Set up Droplet, user and Add Public Key Authentication (optional - delete password login 
+1) Spin up Ubuntu 16 Droplet (https://www.digitalocean.com/), set up Droplet, user and Add Public Key Authentication (optional - delete password login 
 https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-16-04. Jump step about ssh-copy-id eller cat to server and copy-paste content of public key instead 
 
 2) Now you should be able to access the server from your local machine with putty or terminal. With Putty access with IP + user/pass og SSH access. With terminal write `SSH username@IP` (the first login ask for info).

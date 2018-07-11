@@ -24,4 +24,4 @@ https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgres
 9) If necessary open relevant port (in this case default port 5432) in windows firewall (remeber security aspects...)
 http://www.tomshardware.co.uk/faq/id-3114787/open-firewall-ports-windows.html
 
-10) Connect with PGadmin4 with droplet IP, the created user and password. If connectiong fails on authentification then go to login to server, connect to postgress with `sudo -u postgres psql` and run query `CREATE USER myuser WITH ENCRYPTED PASSWORD 'secret';`
+10) Remote connect with PGadmin4 with droplet IP, the created user and password. If connectiong fails on authentification then go to login to server, connect to postgress with `sudo -u postgres psql` and run query `CREATE USER myuser WITH ENCRYPTED PASSWORD 'secret';`

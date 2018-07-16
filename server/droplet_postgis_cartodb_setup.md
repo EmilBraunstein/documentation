@@ -21,6 +21,6 @@ What I did (Credit to sverhoeven in the link above):
 -`docker rm -f cartodb_pgdata`
 -  Inside container cartodb_pgdata is owned by postgres (uid=105) user, it should be owned by same user on the local filesystem
 -`sudo chown -R 105.105 $PWD/cartodb_pgdata`
-- After this the CartoDB container will have a database that stays filled after restarts. The CartoDB container can be stop and started with 1) see docker alias with `docker ps`, 2) then run `docker stop <docker alias>`
+- After this the CartoDB container will have a database that stays filled after restarts. The CartoDB container can be stop and started with 1) see docker alias with `docker ps`, 2) then run `docker stop <docker id>`
 - Start contariner with `docker run -d -p 80:80 -h <insert the Droplet IP> -v $PWD/cartodb_pgdata:/var/lib/postgresql sverhoeven/cartodb`
-
+- Final from above link is to run geocoder installation if wanted.

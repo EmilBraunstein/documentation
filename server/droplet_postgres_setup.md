@@ -1,4 +1,4 @@
-This test setup aims towards setting up an environment with a Droplet with postgresql db and connecting to it from a local machine with PGadmin4, QGIS 3.0 and Notepad++. For further use of this test environment one should set up extra security.
+This test setup aims towards setting up an environment with a Droplet with postgresql db and connecting to it from a local machine with PGadmin4, QGIS 3.0 and Notepad++. Alternatively this can be done environment. For further use of this test environment one should set up extra security.
 
 1) Spin up Ubuntu 16 Droplet (https://www.digitalocean.com/). First time with droplet IP and user `root` and droplet password (sent to your mail).
 

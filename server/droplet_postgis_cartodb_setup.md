@@ -16,11 +16,10 @@ What I did (Credit to sverhoeven in the link above):
 - Go to `<Droplet IP>` in browser - CartoDB should be up and running
 - Persistent data with the following below (make setup so that data does not delete when container is rebooted):
 - `docker create --name cartodb_pgdata sverhoeven/cartodb`
-- # Change to directory to save the Postgresql data dir (cartodb_pgdata) of the CartoDB image
+- Change to directory to save the Postgresql data dir (cartodb_pgdata) of the CartoDB image
 -`docker cp cartodb_pgdata:/var/lib/postgresql $PWD/cartodb_pgdata`
 -`docker rm -f cartodb_pgdata`
-- # Inside container cartodb_pgdata is owned by postgres (uid=105) user,
-- # it should be owned by same user on the local filesystem
+-  Inside container cartodb_pgdata is owned by postgres (uid=105) user, it should be owned by same user on the local filesystem
 -`sudo chown -R 105.105 $PWD/cartodb_pgdata`
 - After this the CartoDB container will have a database that stays filled after restarts. The CartoDB container can be stop and started with 1) see docker alias with `docker ps`, 2) then run `docker stop <docker alias>`
 - Start contariner with `docker run -d -p 80:80 -h <insert the Droplet IP> -v $PWD/cartodb_pgdata:/var/lib/postgresql sverhoeven/cartodb`

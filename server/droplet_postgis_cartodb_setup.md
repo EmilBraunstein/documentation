@@ -13,4 +13,4 @@ What I did (Credit to sverhoeven in the link above):
 - `docker run -d -p 80:80 -h cartodb.localhost sverhoeven/cartodb`
 - `docker run -d -p 80:80 -h <insert the Droplet IP> sverhoeven/cartodb`
 - Wait a copule of minuts
-- Do to <Droplet IP> in browser - CartoDB should be up and running
+- Go to `<Droplet IP>` in browser - CartoDB should be up and running

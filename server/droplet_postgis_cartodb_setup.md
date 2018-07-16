@@ -10,7 +10,7 @@ This test setup aims towards setting up an docker environment with a Droplet wit
 What I did (Credit to sverhoeven in the link above):
 - `sudo apt-get update`
 - `apt install docker.io`
-- `docker run -d -p 80:80 -h cartodb.localhost sverhoeven/cartodb``
+- `docker run -d -p 80:80 -h cartodb.localhost sverhoeven/cartodb`
 - `docker run -d -p 80:80 -h <insert the Droplet IP> sverhoeven/cartodb`
 - Wait a copule of minuts
 - Go to `<Droplet IP>` in browser - CartoDB should be up and running

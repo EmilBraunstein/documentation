@@ -21,7 +21,11 @@ What I did (Credit to sverhoeven in the link above):
 -`docker cp cartodb_pgdata:/var/lib/postgresql $PWD/cartodb_pgdata`
 -`docker rm -f cartodb_pgdata`
 -  Inside container cartodb_pgdata is owned by postgres (uid=105 (NOW 103!)) user, it should be owned by same user on the local filesystem
--`sudo chown -R 105.105 $PWD/cartodb_pgdata` OBS! Default owner is changed on carto project so that postgresql owner in docker is now set to 103. So run `sudo chown -R 103.103 $PWD/cartodb_pgdata`. Check owner on docker by 1) starting `docker run -d -p 80:80 -h <insert the Droplet IP> sverhoeven/cartodb`, 2) run `docker exec -it <docker id>`, 3) go to var/lib and run `stat postgresql/`, 4) See owner Uid
+-`sudo chown -R 103.103 $PWD/cartodb_pgdata` OBS! Default owner is changed on carto project so that postgresql owner in docker is now set to 103. So run `sudo chown -R 103.103 $PWD/cartodb_pgdata`. Check owner on docker by:
+1) starting `docker run -d -p 80:80 -h <insert the Droplet IP> sverhoeven/cartodb`, 
+2) run `docker exec -it <docker id>`, 
+3) go to var/lib and run `stat postgresql/`, 
+4) See owner Uid
 - After this the CartoDB container will have a database that stays filled after restarts. The CartoDB container can be stop and started with 1) see docker alias with `docker ps`, 2) then run `docker stop <docker id>`
 - Start container with restart policy `--restart always` with the following command `docker run --restart always -d -p 80:80 -h <insert the Droplet IP> -v $PWD/cartodb_pgdata:/var/lib/postgresql sverhoeven/cartodb`
 #Redirect to https
